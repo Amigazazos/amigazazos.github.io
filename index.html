@@ -46,6 +46,40 @@
             background-color: rgba(255, 255, 255, 0.2);
         }
 
+        .downloads {
+            margin-top: 50px;
+        }
+
+        .downloads h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .download-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.1em;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .version-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
         footer {
             margin-top: 50px;
             font-size: 0.9em;
@@ -57,7 +91,19 @@
     <div class="overlay">
         <h1>Servidor Amigazazos</h1>
         <p>¡Bienvenid@ al mejor servidor de Minecraft para jugar con tus compas! Sobrevive, construye, explora y crea recuerdos inolvidables.</p>
+        
         <div class="ip-box" onclick="copyIP()">IP del servidor: <strong>Amigasazos.aternos.me:45277</strong></div>
+
+        <!-- Sección de descargas -->
+        <div class="downloads">
+            <h2>Descargas</h2>
+            <a href=""D:\imagenes prueba\Amigazazos\fabric-installer-1.0.1.exe"" class="download-button" download>Descargar Fabric📜</a>
+            <div class="version-row">
+                <a href="ruta/a/version-con-shaders.zip" class="download-button" download>Versión con Shaders🌅</a>
+                <a href="ruta/a/version-sin-shaders.zip" class="download-button" download>Versión sin Shaders🌄</a>
+            </div>
+        </div>
+
         <footer>
             <p>&copy; 2025 Servidor Amigazazos - Todos los derechos reservados</p>
         </footer>
