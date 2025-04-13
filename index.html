@@ -5,24 +5,29 @@
     <title>Servidor Amigazazos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
         body {
-                margin: 0;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                background: url('https://wallpapercave.com/wp/wp2780724.jpg') no-repeat center center fixed;
-                background-size: cover;
-                color: white;
-                text-align: center;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://wallpapercave.com/wp/wp2780724.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
 
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
-            }
-
-      .overlay {
-                background: rgba(0, 0, 0, 0.7);
-                padding: 40px 20px;
-                flex: 1;
-            }
+        .overlay {
+            background: rgba(0, 0, 0, 0.7);
+            flex: 1;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
         h1 {
             font-size: 4em;
@@ -85,26 +90,27 @@
         }
 
         footer {
-            margin-top: 50px;
             font-size: 0.9em;
             color: #ccc;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <div class="overlay">
-        <h1>Servidor Amigazazos</h1>
-        <p>¡Bienvenid@ al mejor servidor de Minecraft para jugar con tus compas! Sobrevive, construye, explora y crea recuerdos inolvidables.</p>
-        
-        <div class="ip-box" onclick="copyIP()">IP del servidor: <strong>Amigasazos.aternos.me:45277</strong></div>
+        <div>
+            <h1>Servidor Amigazazos</h1>
+            <p>¡Bienvenid@ al mejor servidor de Minecraft para jugar con tus compas! Sobrevive, construye, explora y crea recuerdos inolvidables.</p>
+            <div class="ip-box" onclick="copyIP()">IP del servidor: <strong>Amigasazos.aternos.me:45277</strong></div>
 
-        <!-- Sección de descargas -->
-        <div class="downloads">
-            <h2>Descargas</h2>
-            <a href="https://amigazazos.github.io/fabric-installer-1.0.1.exe" class="download-button" download>Descargar Fabric📜</a>
-            <div class="version-row">
-                <a href="https://drive.google.com/uc?export=download&id=1YK5L5l_Hq9etRXouc7pp7rIaKHTd4s6g" class="download-button" download>Versión con Shaders🌅</a>
-                <a href="ruta/a/version-sin-shaders.zip" class="download-button" download>Versión sin Shaders🌄</a>
+            <!-- Sección de descargas -->
+            <div class="downloads">
+                <h2>Descargas</h2>
+                <a href="https://amigazazos.github.io/fabric-installer-1.0.1.exe" class="download-button" download>Descargar Fabric📜</a>
+                <div class="version-row">
+                    <a href="https://drive.google.com/uc?export=download&id=1YK5L5l_Hq9etRXouc7pp7rIaKHTd4s6g" class="download-button" download>Versión con Shaders🌅</a>
+                    <a href="https://drive.google.com/uc?export=download&id=TU_ID_DE_VERSION_SIN_SHADERS" class="download-button" download>Versión sin Shaders🌄</a>
+                </div>
             </div>
         </div>
 
