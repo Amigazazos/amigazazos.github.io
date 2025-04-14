@@ -94,6 +94,66 @@
             color: #ccc;
             margin-top: 40px;
         }
+
+        /* Media Query para móviles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;  /* Reducir el tamaño del título */
+            }
+
+            p {
+                font-size: 1em; /* Reducir el tamaño del texto */
+            }
+
+            .ip-box {
+                font-size: 1.2em;
+                padding: 8px 16px;
+            }
+
+            .download-button {
+                font-size: 1em;  /* Reducir tamaño de los botones */
+                padding: 10px 20px;
+            }
+
+            .version-row {
+                flex-direction: column;
+                gap: 20px;  /* Cambiar de fila a columna */
+                margin-top: 30px;
+            }
+
+            .downloads h2 {
+                font-size: 1.5em;
+            }
+
+            footer {
+                font-size: 0.8em;
+            }
+        }
+
+        /* Media Query para pantallas pequeñas */
+        @media (max-width: 480px) {
+            .overlay {
+                padding: 20px;
+            }
+
+            .ip-box {
+                font-size: 1em;
+                padding: 8px 16px;
+            }
+
+            .download-button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+
+            .version-row {
+                gap: 10px;
+            }
+
+            footer {
+                font-size: 0.7em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -113,17 +173,18 @@
                 </div>
             </div>
             <!-- Sección de tutorial -->
-              <div class="downloads">
+            <div class="downloads">
                 <h2>Tutorial</h2>
-                 <div style="max-width: 700px; margin: 0 auto; border-radius: 10px; overflow: hidden;">
-                 <div style="position:relative;padding-bottom:56.25%;height:0;">
-                 <iframe src="https://www.youtube.com/embed/sLTNgxxSBR4"
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-                    allowfullscreen
-                    loading="lazy">
-                    </iframe>
+                <div style="max-width: 700px; margin: 0 auto; border-radius: 10px; overflow: hidden;">
+                    <div style="position:relative;padding-bottom:56.25%;height:0;">
+                        <iframe src="https://www.youtube.com/embed/sLTNgxxSBR4"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
-             </div>
+            </div>
         </div>
 
         <footer>
