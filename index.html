@@ -14,7 +14,7 @@
             display: flex;
             flex-direction: column;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: url('imagenes/fondo1.png') no-repeat center center fixed;
+            background: url('imagenes/fondo1.png') no-repeat center center;
             background-size: cover;
             color: white;
             text-align: center;
@@ -95,8 +95,19 @@
             margin-top: 40px;
         }
 
-        /* Media Query para móviles */
+        /* Media Query para pantallas grandes */
+        @media (min-width: 769px) {
+            body {
+                background-attachment: fixed; /* Fijo solo en pantallas grandes */
+            }
+        }
+
+        /* Media Query para móviles y pantallas pequeñas */
         @media (max-width: 768px) {
+            body {
+                background-attachment: scroll; /* Evitar que el fondo se mueva */
+            }
+
             h1 {
                 font-size: 2.5em;  /* Reducir el tamaño del título */
             }
@@ -130,7 +141,7 @@
             }
         }
 
-        /* Media Query para pantallas pequeñas */
+        /* Media Query para pantallas muy pequeñas */
         @media (max-width: 480px) {
             .overlay {
                 padding: 20px;
