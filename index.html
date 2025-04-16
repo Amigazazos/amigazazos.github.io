@@ -1,216 +1,57 @@
 <!DOCTYPE html>
- <html lang="es">
- <head>
-     <meta charset="UTF-8">
-     <title>Servidor Amigazazos</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <style>
-         html, body {
-             height: 100%;
-             margin: 0;
-         }
- 
-         body {
-             display: flex;
-             flex-direction: column;
-             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-             background: url('imagenes/fondo2.png') no-repeat center center fixed;
-             background-size: cover;
-             color: white;
-             text-align: center;
-         }
- 
-         .overlay {
-             background: rgba(0, 0, 0, 0.7);
-             flex: 1;
-             padding: 40px 20px;
-             display: flex;
-             flex-direction: column;
-             justify-content: space-between;
-         }
- 
-         h1 {
-             font-size: 4em;
-             margin-bottom: 10px;
-         }
- 
-         p {
-             font-size: 1.3em;
-             max-width: 600px;
-             margin: auto;
-         }
- 
-         .ip-box {
-             margin-top: 30px;
-             font-size: 1.5em;
-             padding: 10px 20px;
-             border: 2px solid white;
-             display: inline-block;
-             border-radius: 10px;
-             background-color: rgba(255, 255, 255, 0.1);
-             cursor: pointer;
-         }
- 
-         .ip-box:hover {
-             background-color: rgba(255, 255, 255, 0.2);
-         }
- 
-         .downloads {
-             margin-top: 50px;
-         }
- 
-         .downloads h2 {
-             font-size: 2em;
-             margin-bottom: 20px;
-         }
- 
-         .download-button {
-             display: inline-block;
-             margin: 10px;
-             padding: 12px 25px;
-             background-color: rgba(255, 255, 255, 0.1);
-             border: 2px solid white;
-             border-radius: 10px;
-             color: white;
-             font-size: 1.1em;
-             text-decoration: none;
-             transition: background-color 0.3s;
-         }
- 
-         .download-button:hover {
-             background-color: rgba(255, 255, 255, 0.2);
-         }
- 
-         .version-row {
-             display: flex;
-             justify-content: center;
-             gap: 40px;
-             flex-wrap: wrap;
-             margin-top: 20px;
-         }
- 
-         footer {
-             font-size: 0.9em;
-             color: #ccc;
-             margin-top: 40px;
-         }
- 
-         /* Media Query para móviles */
-         @media (max-width: 768px) {
-             h1 {
-                 font-size: 2.5em;  /* Reducir el tamaño del título */
-             }
- 
-             p {
-                 font-size: 1em; /* Reducir el tamaño del texto */
-             }
- 
-             .ip-box {
-                 font-size: 1.2em;
-                 padding: 8px 16px;
-             }
- 
-             .download-button {
-                 font-size: 1em;  /* Reducir tamaño de los botones */
-                 padding: 10px 20px;
-             }
- 
-             .version-row {
-                 flex-direction: column;
-                 gap: 20px;  /* Cambiar de fila a columna */
-                 margin-top: 30px;
-             }
- 
-             .downloads h2 {
-                 font-size: 1.5em;
-             }
- 
-             footer {
-                 font-size: 0.8em;
-             }
-         }
- 
-         /* Media Query para pantallas pequeñas */
-         @media (max-width: 480px) {
-             .overlay {
-                 padding: 20px;
-             }
- 
-             .ip-box {
-                 font-size: 1em;
-                 padding: 8px 16px;
-             }
- 
-             .download-button {
-                 font-size: 0.9em;
-                 padding: 8px 16px;
-             }
- 
-             .version-row {
-                 gap: 10px;
-             }
- 
-             footer {
-                 font-size: 0.7em;
-             }
-         }
-     </style>
-  <link rel="icon" href="https://amigazazos.github.io/logo/favicon.png" type="image/png">
- </head>
- <body>
-     <div class="overlay">
-         <div>
-             <!-- <h1>Servidor Amigazazos</h1>-->
-             <img src="https://amigazazos.github.io/logo/LOGOF.png" alt="Servidor Amigazazos" style="width: 450px; max-width: 90%; height: auto; margin: 10px auto;">
-             <p>¡Bienvenid@ al mejor servidor de Minecraft!</p>
-             <p>Sobrevive, construye y explora.</p>
-             <div class="ip-box" onclick="copyIP()">IP del servidor: <strong>Amigazazos1.aternos.me:45277</strong></div>
- 
-             <!-- Sección de descargas -->
-             <div class="downloads">
-                 <h2>Descargas</h2>
-                 <a href="https://amigazazos.github.io/fabric-installer-1.0.1.exe" class="download-button" download>Descargar Fabric📜</a>
-                 <div class="version-row">
-                     <a href="https://drive.google.com/uc?export=download&id=1YK5L5l_Hq9etRXouc7pp7rIaKHTd4s6g" class="download-button" download>Versión con Shaders🌅</a>
-                     <a href="https://drive.google.com/uc?export=download&id=TU_ID_DE_VERSION_SIN_SHADERS" class="download-button" download>Versión sin Shaders🌄</a>
-                 </div>
-             </div>
-             <!-- Sección de tutorial -->
-               <div class="downloads">
-             <div class="downloads">
-                 <h2>Tutorial</h2>
-                  <div style="max-width: 700px; margin: 0 auto; border-radius: 10px; overflow: hidden;">
-                  <div style="position:relative;padding-bottom:56.25%;height:0;">
-                  <iframe src="https://www.youtube.com/embed/sLTNgxxSBR4"
-                     style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-                     allowfullscreen
-                     loading="lazy">
-                     </iframe>
-                 <div style="max-width: 700px; margin: 0 auto; border-radius: 10px; overflow: hidden;">
-                     <div style="position:relative;padding-bottom:56.25%;height:0;">
-                         <iframe src="https://www.youtube.com/embed/sLTNgxxSBR4"
-                             style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-                             allowfullscreen
-                             loading="lazy">
-                         </iframe>
-                     </div>
-                 </div>
-              </div>
-             </div>
-         </div>
- 
-         <footer>
-             <p>&copy; 2025 Servidor Amigazazos - Todos los derechos reservados</p>
-         </footer>
-     </div>
- 
-     <script>
-         function copyIP() {
-             const ip = "Amigazazos1.aternos.me:45277";
-             navigator.clipboard.writeText(ip).then(() => {
-                 alert("¡IP copiada al portapapeles!");
-             });
-         }
-     </script>
- </body>
- </html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Servidor Amigazazos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="https://amigazazos.github.io/logo/favicon.png" type="image/png">
+</head>
+<body>
+    <div class="overlay">
+        <div>
+            <img src="https://amigazazos.github.io/logo/LOGOF.png" alt="Servidor Amigazazos" style="width: 450px; max-width: 90%; height: auto; margin: 10px auto;">
+            <p>¡Bienvenid@ al mejor servidor de Minecraft!</p>
+            <p>Sobrevive, construye y explora.</p>
+            <div class="ip-box" onclick="copyIP()">IP del servidor: <strong>Amigazazos1.aternos.me:45277</strong></div>
+
+            <!-- Sección de descargas -->
+            <div class="downloads">
+                <h2>Descargas</h2>
+                <a href="https://amigazazos.github.io/fabric-installer-1.0.1.exe" class="download-button" download>Descargar Fabric📜</a>
+                <div class="version-row">
+                    <a href="https://drive.google.com/uc?export=download&id=1YK5L5l_Hq9etRXouc7pp7rIaKHTd4s6g" class="download-button" download>Versión con Shaders🌅</a>
+                    <a href="https://drive.google.com/uc?export=download&id=TU_ID_DE_VERSION_SIN_SHADERS" class="download-button" download>Versión sin Shaders🌄</a>
+                </div>
+            </div>
+
+            <!-- Sección de tutorial -->
+            <div class="downloads">
+                <h2>Tutorial</h2>
+                <div style="max-width: 700px; margin: 0 auto; border-radius: 10px; overflow: hidden;">
+                    <div style="position:relative;padding-bottom:56.25%;height:0;">
+                        <iframe src="https://www.youtube.com/embed/sLTNgxxSBR4"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Servidor Amigazazos - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script>
+        function copyIP() {
+            const ip = "Amigazazos1.aternos.me:45277";
+            navigator.clipboard.writeText(ip).then(() => {
+                alert("¡IP copiada al portapapeles!");
+            });
+        }
+    </script>
+</body>
+</html>
